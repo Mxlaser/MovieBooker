@@ -1,12 +1,17 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Res} from '@nestjs/common';
 import { AppService } from './app.service';
+import { Response } from 'express';
 
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  // @Get()
+  // getHello(): string {
+  //   return 'Hello World!';
+  // }
   @Get()
-  getHello(): string {
-    return 'Hello World!';
+  redirectToSwagger(@Res() res: Response) {
+    return res.redirect('/api');
   }
 }
