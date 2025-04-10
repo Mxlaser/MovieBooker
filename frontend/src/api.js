@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://moviebooker-api.onrender.com/api',
+  baseURL: 'https://moviebooker-api.onrender.com',
 });
 
 // Ajouter le token si disponible
