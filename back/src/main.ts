@@ -5,6 +5,11 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  app.enableCors({
+    origin: 'http://localhost:5173',
+    credentials: true,
+  });
+
   const config = new DocumentBuilder()
     .setTitle('API Auth NestJS')
     .setDescription('Endpoints d’authentification avec JWT')
@@ -18,4 +23,3 @@ async function bootstrap() {
   await app.listen(3000);
 }
 bootstrap();
-

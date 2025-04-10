@@ -6,10 +6,6 @@ import { Response } from 'express';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  // @Get()
-  // getHello(): string {
-  //   return 'Hello World!';
-  // }
   @Get()
   redirectToSwagger(@Res() res: Response) {
     return res.redirect('/api');

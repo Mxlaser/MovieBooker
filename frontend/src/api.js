@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://moviebooker-api.onrender.com',
+  baseURL: 'http://localhost:3000',
 });
 
 API.interceptors.request.use((config) => {
